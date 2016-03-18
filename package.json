@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "players_and_teams",
+  "version": "1.0.0",
+  "description": "angular practice",
+  "main": "server.js",
+  "author": "amrita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
