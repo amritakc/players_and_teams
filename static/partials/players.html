@@ -1,0 +1,18 @@
+<div ng-controller="playersController">
+
+  <form>
+       Player: <input type='text' ng-model='newPlayer.name'  ng-init="newPlayer.name= 'Drew Brees'">
+       <input type='submit' value='Add Player' ng-click='addPlayer()'>
+    </form> 
+
+    <table>
+    	<tr>
+          <th>Name</th>
+          <th>Action</th>
+          </tr>
+          <tr ng-repeat="player in players track by $index">
+            <td>{{ player.name }} </td>
+            <td ng-click='removePlayer($index)'><button>Remove Player</button></td>
+          </tr>
+        </table>
+</div>

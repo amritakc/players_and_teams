@@ -1,0 +1,26 @@
+<div ng-controller="associationsController">
+
+  <form>
+       Player: 
+       <select ng-model='newTeam.player'>
+          <option ng-repeat = "player in players track by $index">{{player.name}}</option>
+        </select>
+       Team: 
+       <select ng-model='newTeam.team'>
+          <option  ng-repeat = "teamname in teamnames track by $index">{{teamname.team_name}}</option>
+       </select>
+          <input type='submit' value='Assign Player to Team' ng-click='addTeam()'>
+    </form> 
+
+    <table>
+    	<tr>
+          <th>Name</th>
+          <th>Team</th>
+          </tr>
+          <tr ng-repeat="team in teams track by $index">
+            <td>{{ team.player }} </td>
+            <td>{{ team.team }} </td>
+            <td ng-click='removeTeam($index)'><button>Remove Team</button></td>
+          </tr>
+        </table>
+</div>
